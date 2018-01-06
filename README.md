@@ -24,10 +24,16 @@ $ npm install docbase-pdf --save
 
 ## Usage with TypeScript
 
-### Client
+### DocBasePdfオブジェクト
 
-Your app will interact with the Web API through the `DocBasePdf` object, 
-which a top level export from this package. 
+- `DocBasePdf`オブジェクトを使ってをDocBaseから記事を取得し、PDFを出力します
+- `const docBasePdf: DocBasePdf = new DocBasePdf(DOC_BASE_API_TOKEN, TEAM_NAME);`で`DocBasePdf`オブジェクトを準備してください。
+- `DOC_BASE_API_TOKEN`には、DocBaseのアクセストークンを設定してください。アクセスートークンの取得方法は、以下、公式マニュアルを参照してください。
+  - [アクセストークンについて](https://help.docbase.io/posts/45703#%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3)
+- `process.env.DOC_BASE_API_TOKEN`を取得するには、コマンド実行時に環境変数として`DOC_BASE_API_TOKEN`を設定してください。
+    - コマンド実行例: ```$ DOC_BASE_API_TOKEN=*** node .```
+- `TEAM_NAME`は、domainを指定してください
+    - 例えば、`https://hoge.docbase.io`というURLでDocBaseを利用している場合、```const TEAM_NAME='hoge'```です。
 
 ```typescript
 // An access token
