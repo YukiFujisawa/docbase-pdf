@@ -1,6 +1,6 @@
-lib/
 node_modules/
 src/*index.ts
+lib/index.*
 
 # Created by .ignore support plugin (hsz.mobi)
 ### macOS template
