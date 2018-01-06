@@ -8,7 +8,12 @@ docbase-pdf is a library for DocBase (https://docbase.io/).
 You can download the article as a PDF file.
 
 docbase-pdfは、情報共有サービスDocBase (https://docbase.io/) 用のライブラリです。
-記事をPDFファイルでダウンロードすることができます。
+DocBase記事のPDFファイルでダウンロードすることができます。
+
+### 出力サンプル
+
+- [Markdown(元記事)](https://yukifujisawa.github.io/docbase-pdf/sample.md)
+- [PDF(出力した記事)](https://yukifujisawa.github.io/docbase-pdf/347796_DOCBASE_API_TEST.pdf)
 
 
 ## Installation
@@ -33,8 +38,6 @@ const docBasePdf: DocBasePdf = new DocBasePdf(DOC_BASE_API_TOKEN, TEAM_NAME);
 ```
 
 ## Sample Code For TypeScript / サンプルコード
-
-
 
 ```typescript
 import { DocBasePdf } from './DocBasePdf';
