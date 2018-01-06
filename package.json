@@ -14,6 +14,12 @@
   },
   "author": "Yuki Fujisawa <g031y148yuki@gmail.com> (https://github.com/YukiFujisawa)",
   "license": "MIT",
+  "keywords": [
+    "docbase",
+    "client",
+    "pdf",
+    "markdown"
+  ],
   "bugs": {
     "url": "https://github.com/YukiFujisawa/docbase-pdf.git/issues"
   },
