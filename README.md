@@ -46,7 +46,7 @@ const docBasePdf: DocBasePdf = new DocBasePdf(DOC_BASE_API_TOKEN, TEAM_NAME);
 ## Sample Code For TypeScript / サンプルコード
 
 ```typescript
-import { DocBasePdf } from './DocBasePdf';
+import { DocBasePdf } from 'docbase-pdf/lib/DocBasePdf';
 import { MemoCondition } from 'node-docbase-sdk/lib/conditions/MemoCondition';
 
 // Get DocBaseAPI Token from cli.
