@@ -1,6 +1,6 @@
 {
   "name": "docbase-pdf",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Convert DocBase Memo to pdf.",
   "main": "lib/index.js",
   "scripts": {
