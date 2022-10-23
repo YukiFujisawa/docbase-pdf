@@ -6,7 +6,7 @@ export declare class DocBasePdf {
     constructor(apiToken: string, domain: string);
     getByMemoId(memoId: number, outputPath: string): Promise<void>;
     getByCondition(condition: MemoCondition, outputPath: string): Promise<void>;
-    private findMemo(memoId);
-    private searchMemos(condition);
-    private convert(memos, outputPath);
+    private findMemo;
+    private searchMemos;
+    private convert;
 }

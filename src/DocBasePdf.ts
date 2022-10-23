@@ -3,7 +3,8 @@ import { DocBase } from 'node-docbase-sdk/lib/DocBase';
 import { DocBaseResponse } from 'node-docbase-sdk/lib/DocBaseResponse';
 import { HttpStatus } from 'node-docbase-sdk/lib/enums/HttpStatus';
 import { MemoCondition } from 'node-docbase-sdk/lib/conditions/MemoCondition';
-import * as sanitize from 'sanitize-filename';
+import { sanitize } from 'sanitize-filename-ts';
+var fs = require('fs');
 
 const path = require('path');
 const markdownPdf = require('markdown-pdf');
@@ -58,12 +59,20 @@ export class DocBasePdf {
         const filePath = `${outputPath}/${sanitize(memo.id + '_' + memo.title)}.pdf`;
 
         const content = `# ${memo.title + '\n'} ${memo.body}`;
-        markdownPdf({ cssPath: CSS_PATH }).from.string(content).to(filePath, (error: any) => {
-          if (error) {
-            throw error;
-          }
-          console.log(`Created ${filePath}`);
-        });
+        markdownPdf({ cssPath: CSS_PATH })
+          .from.string(content)
+          .to(filePath, (error: any) => {
+            if (error) {
+              throw error;
+            }
+            console.log(`Created ${filePath}`);
+          });
+        try {
+          const mkFilePath: string = `${outputPath}/${sanitize(memo.id + '_' + memo.title)}.md`;
+          fs.writeFileSync(mkFilePath, content);
+        } catch (e) {
+          console.log(e);
+        }
       }
     } catch (error) {
       throw error;
